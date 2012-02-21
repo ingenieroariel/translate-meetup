@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,6 +36,24 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="#">Multilingual sites in Django</a>
+
+   <!-- Only show the language form if the csrf_token is present -->
+   {% if csrf_token != "NOTPROVIDED" %}       
+   {% get_current_language as LANGUAGE %}
+    <form class="langbari pull-right" id="target" action="/i18n/setlang/" method="post">
+      {% csrf_token %}
+       <div style="display: inline;">
+         <select id="langval" name="language" onchange="javascript:form.submit()">
+           {% for lang in LANGUAGES %}
+            <option value="{{ lang.0 }}"
+                {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                {{ lang.1 }}
+            </option>
+           {% endfor %}
+         </select>
+       </div>
+     </form>
+   {% endif %}
         </div>
       </div>
     </div>

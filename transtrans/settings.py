@@ -127,8 +127,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'rosetta',
+    'modeltranslation',
     'sections',
 )
+
+MODELTRANSLATION_TRANSLATION_REGISTRY = "transtrans.translation"
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

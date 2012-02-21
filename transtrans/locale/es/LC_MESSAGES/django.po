@@ -20,7 +20,7 @@ msgstr ""
 
 #: templates/index.html:6 templates/index.html.py:38 templates/index.html:65
 msgid "Multilingual sites in Django"
-msgstr ""
+msgstr "Sitios multilingües en Django"
 
 #: templates/index.html:66
 msgid ""

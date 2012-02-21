@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Multilingual sites in Django</title>
+    <title>{% trans "Multilingual sites in Django" %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -35,7 +35,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">Multilingual sites in Django</a>
+          <a class="brand" href="#">{% trans "Multilingual sites in Django" %}</a>
 
    <!-- Only show the language form if the csrf_token is present -->
    {% if csrf_token != "NOTPROVIDED" %}       
@@ -62,9 +62,9 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Multilingual sites in Django</h1>
-        <p>This is a sample page to illustrate the tools available to internationalize django sites. I had to write some content, otherwise I would not be able to translate it. You can stop reading now, seriously.</p>
-        <p><a class="btn btn-primary btn-large" href="https://github.com/ingenieroariel/geonode-translate-meetup">Learn more &raquo;</a></p>
+        <h1>{% trans "Multilingual sites in Django" %}</h1>
+        <p>{% trans "This is a sample page to illustrate the tools available to internationalize django sites. I had to write some content, otherwise I would not be able to translate it. You can stop reading now, seriously." %}</p>
+        <p><a class="btn btn-primary btn-large" href="https://github.com/ingenieroariel/geonode-translate-meetup">{% trans "Learn more" %} &raquo;</a></p>
       </div>
 
       <!-- Example row of columns -->
@@ -73,7 +73,7 @@
         <div class="span4">
           <h2>{{ object.title }}</h2>
           <p> {{ object.description }}</p>
-          <p><a class="btn" href="{{ object.url }}">View details &raquo;</a></p>
+          <p><a class="btn" href="{{ object.url }}">{% trans "View details" %} &raquo;</a></p>
         </div>
         {% endfor %}
       </div>
@@ -86,7 +86,7 @@
              &copy;
          </span>
          <!--[if lte IE 8]></span><![endif]-->
-         Written by Ariel Núñez, no rights reserved.
+         {% trans "Written by Ariel Núñez, no rights reserved." %}
       </footer>
 
     </div> <!-- /container -->
